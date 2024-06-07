@@ -1,0 +1,48 @@
+
+
+.box{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-left: 50px;
+border-bottom: 0.2px solid #2d2d2d;
+
+@media screen and (max-width: 500px) {
+        flex-direction: column;
+        padding-left: 0;
+    
+.btn-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 0.5px solid gray;
+    width: 100%;
+}
+.btn2{
+    width: 100px;
+    border: none;
+    border-left: #2d2d2d 0.5px solid;
+
+}
+.btn2:focus{
+    color: orange;
+}
+.btn1{
+    border-right: #2d2d2d 0.5px solid;
+    width: 100px;
+    color: orange;
+
+}
+
+}
+
+}
+@media screen and (max-width: 470px) {
+    .box-link{
+       
+        .text-f{
+            text-align: left;
+        }
+    }
+  
+}
