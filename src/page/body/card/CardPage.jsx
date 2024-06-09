@@ -87,7 +87,7 @@ p-[10px]
 "
             >
 
-                <div className="w-[1224px] border h-[100vh]">
+                <div className="w-[1224px] border lg:h-[100vh]">
 
                     <div className="box">
                         <div>
