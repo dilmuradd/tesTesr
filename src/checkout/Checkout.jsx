@@ -1,9 +1,7 @@
-import useId from "@mui/material/utils/useId";
 import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BasketContext } from "../Context/Basket";
 const Checkout = () => {
-    console.log(`react snippet works!`);
 
 
     let handleChecked1 = (id) => {
@@ -29,7 +27,7 @@ const Checkout = () => {
 
 
     }
-    let { ArrBasket,SetArrBasket, AddCount, MinusCount, AllSum,SetDynamicPageObject } = useContext(BasketContext)
+    let { TestObject, TestAddButton, ArrBasket, SetArrBasket, AddCount, MinusCount, AllSum, SetDynamicPageObject } = useContext(BasketContext)
 
 
     let handleClear = () => {

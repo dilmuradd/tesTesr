@@ -47,18 +47,7 @@ export let BasketProvider = ({ children }) => {
 
 
 
-        console.log(data);
-
-        ArrBasket.map((value) => {
-            if (value.id === data.id) {
-                SetDynamicPageObject(() => ({
-                    ...value,
-                    count: value.count + 1,
-                }))
-            }
-        })
-
-
+      
 
 
 
@@ -128,7 +117,17 @@ export let BasketProvider = ({ children }) => {
     }
 
 
-    console.log(AllYigindi);
+    
+
+
+
+
+
+
+   
+
+
+
     return (
         <BasketContext.Provider value={{
             SetDynamicPageObject,
@@ -143,7 +142,8 @@ export let BasketProvider = ({ children }) => {
             SetArrBasket,
             handleNavbar,
             MyNav,
-            SetMyNav
+            SetMyNav,
+            
         }}>
             {children}
         </BasketContext.Provider>

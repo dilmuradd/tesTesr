@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import VakansiaCard from "./VakansiaCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 const VakansiyaPage = () => {
 
     let [info, GetInfo] = useState([])
@@ -23,6 +25,26 @@ const VakansiyaPage = () => {
 
     return (
         <div>
+
+{
+                info.length === 0 && <div className='w-[100%] bg-[white] flex flex-col justify-start p-[20px]  gap-5 '>
+
+                    <div className='flex flex-wrap items-center justify-center gap-[70px]'>
+                        <Skeleton height={500} width={400} />
+                        <Skeleton height={500} width={400} />
+                        <Skeleton height={500} width={400} />
+                        <Skeleton height={500} width={400} />
+                        <Skeleton height={500} width={400} />
+                        <Skeleton height={500} width={400} />
+
+                    </div>
+
+
+                </div>
+            }
+
+
+
             <div className="w-[100%] h-[80px]  flex items-center pl-[25px]">
                 <p>
                     <Link to='/' className="hoverCursor" >Bosh sahifa
@@ -30,6 +52,9 @@ const VakansiyaPage = () => {
                         Ish o'rinlari</Link>
                 </p>
             </div>
+
+
+
 
 
             <h1 className="text-[32px] font-bold pl-[50px] my-4">Ish o'rinlari</h1>
