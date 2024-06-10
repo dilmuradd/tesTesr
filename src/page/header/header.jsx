@@ -7,7 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { SwipperPrevH } from "../body/Home/swipperPrev";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
@@ -53,16 +52,7 @@ const Header = () => {
     let privatePage = useNavigate();
 
     let handleForm = () => {
-        // if (!isAuth) {
 
-        //     let Login = document.querySelector('.LoginPage');
-        //     Login.style.display = 'block';
-        //     let Login2 = document.querySelector('.LoginPage-2');
-        //     Login2.style.display = 'block';
-
-        // }else{
-        //     SetIsHeader(true)
-        // }
         if (!isAuth) {
             SetIsHeader(true)
 
@@ -225,11 +215,13 @@ const Header = () => {
                 </div> : null}
 
             <header className="lg:flex mx-auto border-b hidden justify-between text-[18px] h-full">
-                <div className="w-[105px] h-[78px] lg:w-[11vw] lg:h-[76px] bg-[#2d2d2d] flex items-center justify-center">
+                <div className="w-[105px] p-[20px] h-[78px] lg:w-[11vw] lg:h-[76px] bg-[#2d2d2d] flex items-center justify-center">
                     <img className="w-[100%] h-[auto] p-1" src="https://feedup.uz/assets/images/logos/logo.svg" alt="logo" />
                 </div>
                 <nav className="border-b-none px-[26px] py-[24px] ml-[20px] mr-[9px] xxl:mx-[38px] hidden lg:flex h-[100%] items-center gap-[31px]">
-                    <Link to={'/'} onClick={() => menu()}>{t("menyu")}</Link>
+                    <Link to={'/'} onClick={() => setTimeout(() => {
+                        menu()
+                    }, 1000)}>{t("menyu")}</Link>
                     <Link className="link" to="/branchs">{t("filial")}</Link>
                     <Link className="link" to="/vacancies">{t("ish")}</Link>
                     <Link className="link" to="/news">{t("news")}</Link>

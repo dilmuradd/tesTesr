@@ -15,6 +15,7 @@ import Account from './page/body/Account/Account.jsx'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from './Context/Auth.jsx'
 import Footer from './Footer/Footer.jsx'
+import Page404 from './Page404/Page404.jsx'
 
 
 function App() {
@@ -254,6 +255,8 @@ function App() {
         <Route path='/checkout' element={<Checkout />} />
         <Route path='/account' element={isApp ? <Account /> : <Home />} />
         <Route path='/' element={<Home />} />
+      <Route path='*' element={<Page404 />} />
+
       </Routes>
       <Footer />
     </div>
