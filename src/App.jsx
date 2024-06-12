@@ -16,9 +16,11 @@ import { useNavigate } from 'react-router-dom'
 import { AuthContext } from './Context/Auth.jsx'
 import Footer from './Footer/Footer.jsx'
 import Page404 from './Page404/Page404.jsx'
+import DynamicPage from './DynamicPage/DynamicPage.jsx'
 
 
 function App() {
+
   let { isAuth, isHeader, isApp, SetIsApp, SetIsHeader } = useContext(AuthContext)
   let { MyNav, SetMyNav, SetDynamicPageObject, DynamicPageObject, BasketObject, AddCount, MinusCount } = useContext(BasketContext)
   let { ScrollID, ScrollBurger, burger, ScrollDonar, donar, ScrollSendvich, sendvich, Scrollxotdog, xotdog, menu, Smenu, ScrollLavash, lavash } = useContext(ScrollContext)
@@ -255,7 +257,8 @@ function App() {
         <Route path='/checkout' element={<Checkout />} />
         <Route path='/account' element={isApp ? <Account /> : <Home />} />
         <Route path='/' element={<Home />} />
-      <Route path='*' element={<Page404 />} />
+        <Route path='/:id' element={<DynamicPage />} />
+        <Route path='*' element={<Page404 />} />
 
       </Routes>
       <Footer />

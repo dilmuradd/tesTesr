@@ -13,7 +13,6 @@ export let BasketProvider = ({ children }) => {
     let [AllSum, SetAllSum] = useState(0)
 
     let [DynamicPageObject, SetDynamicPageObject] = useState()
-    // let [DynamicPage_Minus,SetDynamicPage_Minus] = useState()
 
 
     let [NoneBlock, SetNOneBlock] = useState(false)
@@ -26,25 +25,7 @@ export let BasketProvider = ({ children }) => {
         if (!TrueOrFalse) {
             let newData = { ...data, count: 1 };
             SetArrBasket([...ArrBasket, newData])
-        } else {
-            let updateBasket = ArrBasket.map((count1) => {
-                if (count1.id === data.id) {
-
-                    return { ...count1, count: count1.count + 1 }
-
-                }
-
-                return count1
-
-            })
-
-
-
-            SetArrBasket(updateBasket)
-
-
-        }
-
+        } 
 
 
       

@@ -354,27 +354,38 @@ const Home = () => {
                             return (
 
                                 <SwiperSlide className='flex justify-center items-center' key={value.id} >
-                                    <div className='border hover:shadow-custom-yellow max-w-[350px] pb-[100px] h-[700px] '>
-                                        <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+                                    <div>
 
-                                            <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
-                                            <h1 className='text-[32px] h-[140px] font-bold'>
-                                                {value.title}
-                                            </h1>
-                                        </div>
-                                        <div className='p-[20px] h-[100px]  border-b'>
-                                            <p>
-                                                {value.text}
-                                            </p>
-                                        </div>
-                                        <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
-                                            <div>
-                                                <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                        <div>
+                                            <Link to={`/${value.id}`} >
+
+                                                <div className='border hover:shadow-custom-yellow max-w-[350px] pb-[20px] h-[700px] '>
+                                                    <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+
+                                                        <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
+                                                        <h1 className='text-[32px] h-[140px] font-bold'>
+                                                            {value.title}
+                                                        </h1>
+                                                    </div>
+                                                    <div className='p-[20px] h-[100px]  border-b'>
+                                                        <p>
+                                                            {value.text}
+                                                        </p>
+                                                    </div>
+                                                    <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
+                                                        <div>
+                                                            <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </Link>
+                                            <div className='flex items-center justify-center'>
+                                                <button onClick={() => BasketObject(value)} className=' relative z-50 bottom-[100px]  active:scale-[0.9] w-[90%] bg-[orange] h-[55px]'>
+                                                    {t("add")}
+                                                </button>
                                             </div>
 
-                                            <button onClick={() => BasketObject(value)} className=' active:scale-[0.9] w-[100%] bg-[orange] h-[55px]'>
-                                                {t("add")}
-                                            </button>
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -481,37 +492,42 @@ const Home = () => {
                         return (
 
 
-                            <div className='flex justify-center items-center  ' key={value.id}  >
-                                <div className=' hover:shadow-custom-yellow border w-[100%] md:max-w-[350px] pb-[100px] h-[700px] '>
-                                    <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+                            <div className='flex justify-center items-center' key={value.id} >
+                                    <div>
 
-                                        <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
-                                        <h1 className='text-[32px] h-[140px] font-bold'>
-                                            {value.title}
-                                        </h1>
-                                    </div>
-                                    <div className='p-[20px] h-[100px]  border-b'>
-                                        <p>
-                                            {value.text}
-                                        </p>
-
-                                    </div>
-                                    <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
                                         <div>
-                                            <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                            <Link to={`/:${value.id}`} >
+
+                                                <div className='border hover:shadow-custom-yellow max-w-[350px] pb-[20px] h-[700px] '>
+                                                    <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+
+                                                        <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
+                                                        <h1 className='text-[32px] h-[140px] font-bold'>
+                                                            {value.title}
+                                                        </h1>
+                                                    </div>
+                                                    <div className='p-[20px] h-[100px]  border-b'>
+                                                        <p>
+                                                            {value.text}
+                                                        </p>
+                                                    </div>
+                                                    <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
+                                                        <div>
+                                                            <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </Link>
+                                            <div className='flex items-center justify-center'>
+                                                <button onClick={() => BasketObject(value)} className=' relative z-50 bottom-[100px]  active:scale-[0.9] w-[90%] bg-[orange] h-[55px]'>
+                                                    {t("add")}
+                                                </button>
+                                            </div>
+
                                         </div>
-                                        <button onClick={() => { BasketObject(value) }} className=' active:scale-[0.9] w-[100%] bg-[orange] h-[55px]'>
-                                            {t("add")}
-
-                                        </button>
-
                                     </div>
                                 </div>
-                            </div>
-
-
-
-
 
 
                         )
@@ -548,31 +564,41 @@ const Home = () => {
 
 
                             <div className='flex justify-center items-center' key={value.id} >
-                                <div className='border hover:shadow-custom-yellow w-[100%] md:max-w-[350px] pb-[100px] h-[700px] '>
-                                    <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+                            <div>
 
-                                        <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
-                                        <h1 className='text-[32px] h-[140px] font-bold'>
-                                            {value.title}
-                                        </h1>
-                                    </div>
-                                    <div className='p-[20px] h-[100px]  border-b'>
-                                        <p>
-                                            {value.text}
-                                        </p>
-                                    </div>
-                                    <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
-                                        <div>
-                                            <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                <div>
+                                    <Link to={`/:${value.id}`} >
+
+                                        <div className='border hover:shadow-custom-yellow max-w-[350px] pb-[20px] h-[700px] '>
+                                            <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+
+                                                <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
+                                                <h1 className='text-[32px] h-[140px] font-bold'>
+                                                    {value.title}
+                                                </h1>
+                                            </div>
+                                            <div className='p-[20px] h-[100px]  border-b'>
+                                                <p>
+                                                    {value.text}
+                                                </p>
+                                            </div>
+                                            <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
+                                                <div>
+                                                    <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <button onClick={() => BasketObject(value)} className=' active:scale-[0.9] w-[100%] bg-[orange] h-[55px]'>
+                                    </Link>
+                                    <div className='flex items-center justify-center'>
+                                        <button onClick={() => BasketObject(value)} className=' relative z-50 bottom-[100px]  active:scale-[0.9] w-[90%] bg-[orange] h-[55px]'>
                                             {t("add")}
-
                                         </button>
-
                                     </div>
+
                                 </div>
                             </div>
+                        </div>
 
 
 
@@ -610,35 +636,42 @@ const Home = () => {
                         return (
 
 
-                            <div className='flex  justify-center items-center' key={value.id} >
-                                <div className='border hover:shadow-custom-yellow w-[100%] md:max-w-[350px] pb-[100px] h-[700px] '>
-                                    <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+                            <div className='flex justify-center items-center' key={value.id} >
+                            <div>
 
-                                        <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
-                                        <h1 className='text-[32px] h-[140px] font-bold'>
-                                            {value.title}
-                                        </h1>
-                                    </div>
-                                    <div className='p-[20px] h-[100px]  border-b'>
-                                        <p>
-                                            {value.text}
-                                        </p>
-                                    </div>
-                                    <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
-                                        <div>
-                                            <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                <div>
+                                    <Link to={`/:${value.id}`} >
+
+                                        <div className='border hover:shadow-custom-yellow max-w-[350px] pb-[20px] h-[700px] '>
+                                            <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+
+                                                <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
+                                                <h1 className='text-[32px] h-[140px] font-bold'>
+                                                    {value.title}
+                                                </h1>
+                                            </div>
+                                            <div className='p-[20px] h-[100px]  border-b'>
+                                                <p>
+                                                    {value.text}
+                                                </p>
+                                            </div>
+                                            <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
+                                                <div>
+                                                    <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <button onClick={() => BasketObject(value)} className=' active:scale-[0.9] w-[100%] bg-[orange] h-[55px]'>
+                                    </Link>
+                                    <div className='flex items-center justify-center'>
+                                        <button onClick={() => BasketObject(value)} className=' relative z-50 bottom-[100px]  active:scale-[0.9] w-[90%] bg-[orange] h-[55px]'>
                                             {t("add")}
-
                                         </button>
-
                                     </div>
+
                                 </div>
                             </div>
-
-
-
+                        </div>
 
 
 
@@ -674,33 +707,42 @@ const Home = () => {
                         return (
 
 
-                            <div className='flex  justify-center items-center' key={value.id} >
-                                <div className='border hover:shadow-custom-yellow w-[100%] md:max-w-[350px] pb-[100px] h-[700px] '>
-                                    <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+                            <div className='flex justify-center items-center' key={value.id} >
+                            <div>
 
-                                        <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
-                                        <h1 className='text-[32px] h-[140px] font-bold'>
-                                            {value.title}
-                                        </h1>
-                                    </div>
-                                    <div className='p-[20px] h-[100px]  border-b'>
-                                        <p>
-                                            {value.text}
-                                        </p>
-                                    </div>
-                                    <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
-                                        <div>
-                                            <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                <div>
+                                    <Link to={`/:${value.id}`} >
+
+                                        <div className='border hover:shadow-custom-yellow max-w-[350px] pb-[20px] h-[700px] '>
+                                            <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+
+                                                <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
+                                                <h1 className='text-[32px] h-[140px] font-bold'>
+                                                    {value.title}
+                                                </h1>
+                                            </div>
+                                            <div className='p-[20px] h-[100px]  border-b'>
+                                                <p>
+                                                    {value.text}
+                                                </p>
+                                            </div>
+                                            <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
+                                                <div>
+                                                    <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <button onClick={() => BasketObject(value)} className=' active:scale-[0.9] w-[100%] bg-[orange] h-[55px]'>
+                                    </Link>
+                                    <div className='flex items-center justify-center'>
+                                        <button onClick={() => BasketObject(value)} className=' relative z-50 bottom-[100px]  active:scale-[0.9] w-[90%] bg-[orange] h-[55px]'>
                                             {t("add")}
-
                                         </button>
-
                                     </div>
+
                                 </div>
                             </div>
-
+                        </div>
 
 
 
@@ -736,32 +778,41 @@ const Home = () => {
 
 
                             <div className='flex justify-center items-center' key={value.id} >
-                                <div className='border hover:shadow-custom-yellow w-[100%] md:max-w-[350px] pb-[100px] h-[700px] '>
-                                    <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+                            <div>
 
-                                        <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
-                                        <h1 className='text-[32px] h-[140px] font-bold'>
-                                            {value.title}
-                                        </h1>
-                                    </div>
-                                    <div className='p-[20px] h-[100px]  border-b'>
-                                        <p>
-                                            {value.text}
-                                        </p>
-                                    </div>
-                                    <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
-                                        <div>
-                                            <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                <div>
+                                    <Link to={`/:${value.id}`} >
+
+                                        <div className='border hover:shadow-custom-yellow max-w-[350px] pb-[20px] h-[700px] '>
+                                            <div className='flex items-center  pb-3 flex-col border-b  gap-3 justify-center p-[30px]'>
+
+                                                <img className='w-[262px] h-[208px] object-contain' src={value.img} alt="food" />
+                                                <h1 className='text-[32px] h-[140px] font-bold'>
+                                                    {value.title}
+                                                </h1>
+                                            </div>
+                                            <div className='p-[20px] h-[100px]  border-b'>
+                                                <p>
+                                                    {value.text}
+                                                </p>
+                                            </div>
+                                            <div className=' p-[20px] gap-5 flex flex-col items-center justify-center'>
+                                                <div>
+                                                    <p className='text-[24px] font-bold'>{value.narx} so'm</p>
+                                                </div>
+                                            </div>
+
                                         </div>
-                                        <button onClick={() => BasketObject(value)} className=' active:scale-[0.9] w-[100%] bg-[orange] h-[55px]'>
+                                    </Link>
+                                    <div className='flex items-center justify-center'>
+                                        <button onClick={() => BasketObject(value)} className=' relative z-50 bottom-[100px]  active:scale-[0.9] w-[90%] bg-[orange] h-[55px]'>
                                             {t("add")}
-
                                         </button>
-
                                     </div>
+
                                 </div>
                             </div>
-
+                        </div>
 
 
 

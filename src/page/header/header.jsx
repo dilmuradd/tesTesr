@@ -216,7 +216,9 @@ const Header = () => {
 
             <header className="lg:flex mx-auto border-b hidden justify-between text-[18px] h-full">
                 <div className="w-[105px] p-[20px] h-[78px] lg:w-[11vw] lg:h-[76px] bg-[#2d2d2d] flex items-center justify-center">
-                    <img className="w-[100%] h-[auto] p-1" src="https://feedup.uz/assets/images/logos/logo.svg" alt="logo" />
+                    <Link to={'/'}>
+                        <img className="w-[100%] h-[auto] p-1" src="https://feedup.uz/assets/images/logos/logo.svg" alt="logo" />
+                    </Link>
                 </div>
                 <nav className="border-b-none px-[26px] py-[24px] ml-[20px] mr-[9px] xxl:mx-[38px] hidden lg:flex h-[100%] items-center gap-[31px]">
                     <Link to={'/'} onClick={() => setTimeout(() => {

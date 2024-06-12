@@ -231,7 +231,7 @@ const Checkout = () => {
                                 Mahsulot:
                             </p>
                             <p className="font-mono">
-                                0 so'm
+                                {(AllSum) - 11000} so'm
                             </p>
                         </div>
 
@@ -257,7 +257,7 @@ const Checkout = () => {
                                 To'lash:
                             </p>
                             <p className="font-mono">
-                                {AllSum}
+                                {AllSum} so'm
                             </p>
                         </div>
 
