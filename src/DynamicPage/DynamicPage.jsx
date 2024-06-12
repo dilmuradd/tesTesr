@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { BasketContext } from "../Context/Basket";
 
 const DynamicPage = () => {
-    let { BasketObject } = useContext(BasketContext)
+    let { BasketObject, SetArrBasket } = useContext(BasketContext)
     let Params = useParams()
     console.log(Params);
     let a = Params.id
@@ -112,6 +112,7 @@ const DynamicPage = () => {
                 </p>
                 <div className="flex items-center justify-center active:scale-[0.9] transition-all">
                     <button onClick={() => BasketObject({
+                        id: xit.id || burger.id || lavash.id || donar.id || sendvich.id || xotdog.id,
                         title: xit.title || burger.title || lavash.title || donar.title || sendvich.title || xotdog.title,
                         narx: xit.narx || burger.narx || lavash.narx || donar.narx || sendvich.narx || xotdog.narx,
                         img: xit.img || burger.img || lavash.img || donar.img || sendvich.img || xotdog.img,

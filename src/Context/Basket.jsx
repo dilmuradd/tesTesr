@@ -25,12 +25,7 @@ export let BasketProvider = ({ children }) => {
         if (!TrueOrFalse) {
             let newData = { ...data, count: 1 };
             SetArrBasket([...ArrBasket, newData])
-        } 
-
-
-      
-
-
+        }
 
 
 
@@ -38,6 +33,7 @@ export let BasketProvider = ({ children }) => {
 
 
     }
+
 
 
 
@@ -98,14 +94,14 @@ export let BasketProvider = ({ children }) => {
     }
 
 
-    
 
 
 
 
 
 
-   
+
+
 
 
 
@@ -124,7 +120,7 @@ export let BasketProvider = ({ children }) => {
             handleNavbar,
             MyNav,
             SetMyNav,
-            
+
         }}>
             {children}
         </BasketContext.Provider>
